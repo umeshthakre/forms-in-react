@@ -2,6 +2,7 @@ import { Formik, useFormik } from "formik";
 import React, { useState, useStateWithCallbackLazy } from "react";
 
 import Modal from "react-modal/lib/components/Modal";
+import Mymodal from "./myModal";
 
 const ModalForm = () => {
   Modal.setAppElement(document.getElementById("root"));
@@ -40,7 +41,7 @@ const ModalForm = () => {
         />
         <button type="submit">Submit</button>
       </form>
-      <Modal isOpen={modalIsOpen}>
+      {/* <Modal isOpen={modalIsOpen}>
         <div>This is modal</div>
         <div>your answer is {answer}</div>
         <button
@@ -50,7 +51,13 @@ const ModalForm = () => {
         >
           close
         </button>
-      </Modal>
+      </Modal> */}
+
+      <Mymodal
+        open={modalIsOpen}
+        setIsModalOpen={setModalIsOpen}
+        value={answer}
+      />
     </div>
   );
 };

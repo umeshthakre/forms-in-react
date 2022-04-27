@@ -6,7 +6,9 @@ import { useFormik } from "formik";
 
 const SendEmailForm = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
   const [modalMessage, setModalMessage] = useState("");
+
   const TEMPLATE_ID = "template_vdls1sm";
   const SERVICE_ID = "service_8inezlv";
   const USER_ID = "sqSJB7MHjcBP7kx3W";
@@ -45,7 +47,7 @@ const SendEmailForm = () => {
           name="name"
           value={formik.values.name}
           onChange={formik.handleChange}
-          className="border-2 border-gray-500 "
+          className=" border-2 border-green-500 "
         />
         <label>Email</label>
         <input
@@ -53,7 +55,7 @@ const SendEmailForm = () => {
           name="email"
           value={formik.values.email}
           onChange={formik.handleChange}
-          className="border-2 border-gray-500 "
+          className=" "
         />
         <label>Subject</label>
         <input
@@ -61,7 +63,7 @@ const SendEmailForm = () => {
           name="subject"
           value={formik.values.subject}
           onChange={formik.handleChange}
-          className="border-2 border-gray-500 "
+          className=" "
         />
         <label>Message</label>
         <textarea

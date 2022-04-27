@@ -2,12 +2,16 @@ import { useState, useEffect } from "react";
 import React from "react";
 
 const SimpleForm = () => {
+  //setting state variables
+
+  const [name, setname] = useState("myname");
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
 
-  const handleChange = async (e) => {
+  const handleChange = (e) => {
     let value = e.target.value;
     setFormData({
       ...formData,
@@ -18,6 +22,11 @@ const SimpleForm = () => {
   useEffect(() => {
     console.log(formData);
   }, [formData]);
+
+  useEffect(() => {
+    console.log(name);
+    setname("Umesh");
+  }, [name]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
